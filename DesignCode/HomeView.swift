@@ -17,6 +17,7 @@ struct HomeView: View {
             HStack {
                 Text("Watching")
                     .font(.system(size: 28, weight: .bold))
+                    .modifier(CustomFontModifier(size: 28))
                 
                 Spacer()
                 
@@ -34,8 +35,8 @@ struct HomeView: View {
                         .frame(width: 36, height: 36)
                         .background(Color.white)
                         .clipShape(Circle())
-                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 1, y: 1  )
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10  )
+                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: 1, y: 1 )
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10 )
                 }
                 .sheet(isPresented: $showUpdate){
                     UpdateList()
@@ -44,6 +45,12 @@ struct HomeView: View {
             .padding(.horizontal)
             .padding(.leading, 14)
             .padding(.top, 30)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                WatchRingsView()
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 30)
+            }
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -119,3 +126,47 @@ let sectionData = [
     Section(title: "Build a SwiftUI App", text: "20 Sections", logo: "Logo2", image: Image("Card2"), color: Color("card2")),
     Section(title: "SwiftUI Advanced", text: "20 Sections", logo: "Logo3", image: Image("Card3"), color: Color("card3"))
 ]
+
+struct WatchRingsView: View {
+    var body: some View {
+        HStack(spacing: 32) {
+            //first card
+            HStack(spacing: 12.0) {
+                RingView(color1: Color(red: 0.00, green: 0.30, blue: 0.81) , color2: Color(red: 0.27, green: 0.67, blue: 0.91), width: 44, height: 44, percent: 68, show: .constant(true))
+                
+                VStack(alignment: .leading, spacing: 4.0) {
+                    Text("6 minutes left")
+                        .bold()
+                        .modifier(FontModifier(style: .subheadline))
+                    Text("Watched 10 mins today")
+                        .modifier(FontModifier(style: .caption))
+                    
+                }
+                .modifier(FontModifier())
+                
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            // second card
+            HStack(spacing: 12.0) {
+                RingView(color1: Color(red: 0.86, green: 0.24, blue: 0.00) , color2: Color(red: 1.00, green: 0.62, blue: 0.24), width: 34, height: 34, percent: 54, show: .constant(true))
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            //third card
+            HStack(spacing: 12.0) {
+                RingView(color1: Color(red: 0.53, green: 0.00, blue: 1.00) , color2: Color(red: 0.94, green: 0.47, blue: 1.00), width: 34, height: 34, percent: 3, show: .constant(true))
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+        }
+    }
+}

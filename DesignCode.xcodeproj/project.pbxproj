@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		DA03E6D3276B20B3008BE51F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03E6D2276B20B3008BE51F /* MenuView.swift */; };
 		DA03E6D5276B7BA8008BE51F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03E6D4276B7BA8008BE51F /* Home.swift */; };
+		DA16837627745EAF009C2194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5AA50E27685FED00626DF0 /* Assets.xcassets */; };
 		DA5AA50B27685FEB00626DF0 /* DesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AA50A27685FEB00626DF0 /* DesignCodeApp.swift */; };
 		DA5AA50D27685FEB00626DF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AA50C27685FEB00626DF0 /* ContentView.swift */; };
-		DA5AA50F27685FED00626DF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5AA50E27685FED00626DF0 /* Assets.xcassets */; };
 		DA5AA51227685FED00626DF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5AA51127685FED00626DF0 /* Preview Assets.xcassets */; };
+		DAA1F52D2770869C009968FE /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1F52C2770869C009968FE /* CourseList.swift */; };
 		DAAAC88D276C707E00989170 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAAC88C276C707E00989170 /* HomeView.swift */; };
 		DAAAC88F276DA87200989170 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAAC88E276DA87100989170 /* UpdateList.swift */; };
 		DAAAC891276DAE8F00989170 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAAC890276DAE8F00989170 /* UpdateDetail.swift */; };
@@ -52,6 +53,7 @@
 		DA5AA50C27685FEB00626DF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA5AA50E27685FED00626DF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA5AA51127685FED00626DF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DAA1F52C2770869C009968FE /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 		DAAAC88C276C707E00989170 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DAAAC88E276DA87100989170 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		DAAAC890276DAE8F00989170 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				DAAAC896276DCD9000989170 /* RingView.swift */,
 				DAAAC898276E058900989170 /* Modifiers.swift */,
 				DA03E6D4276B7BA8008BE51F /* Home.swift */,
+				DAA1F52C2770869C009968FE /* CourseList.swift */,
 				DAAAC88C276C707E00989170 /* HomeView.swift */,
 				DA03E6D2276B20B3008BE51F /* MenuView.swift */,
 				DAAAC88E276DA87100989170 /* UpdateList.swift */,
@@ -242,7 +245,6 @@
 				DAAAC8BA276E08C100989170 /* WorkSans-ThinItalic.ttf in Resources */,
 				DAAAC8B7276E08C100989170 /* WorkSans-MediumItalic.ttf in Resources */,
 				DAAAC8BB276E08C100989170 /* WorkSans-ExtraLightItalic.ttf in Resources */,
-				DA5AA50F27685FED00626DF0 /* Assets.xcassets in Resources */,
 				DAAAC8B6276E08C100989170 /* WorkSans-SemiBoldItalic.ttf in Resources */,
 				DAAAC8C3276E08C100989170 /* WorkSans-ExtraBoldItalic.ttf in Resources */,
 				DAAAC8B2276E08C100989170 /* WorkSans-VariableFont_wght.ttf in Resources */,
@@ -259,6 +261,7 @@
 				DAAAC8BE276E08C100989170 /* WorkSans-Italic.ttf in Resources */,
 				DAAAC8B4276E08C100989170 /* WorkSans-Light.ttf in Resources */,
 				DAAAC8C7276E08C100989170 /* README.txt in Resources */,
+				DA16837627745EAF009C2194 /* Assets.xcassets in Resources */,
 				DAAAC8C4276E08C100989170 /* WorkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +277,7 @@
 				DAAAC899276E058A00989170 /* Modifiers.swift in Sources */,
 				DAAAC891276DAE8F00989170 /* UpdateDetail.swift in Sources */,
 				DA5AA50D27685FEB00626DF0 /* ContentView.swift in Sources */,
+				DAA1F52D2770869C009968FE /* CourseList.swift in Sources */,
 				DA03E6D3276B20B3008BE51F /* MenuView.swift in Sources */,
 				DAAAC895276DB5FE00989170 /* TapBar.swift in Sources */,
 				DAAAC88F276DA87200989170 /* UpdateList.swift in Sources */,
@@ -338,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -393,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -408,18 +412,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
 				DEVELOPMENT_TEAM = TG89376M92;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DesignCode;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,18 +447,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
 				DEVELOPMENT_TEAM = TG89376M92;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DesignCode;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

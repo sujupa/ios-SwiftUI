@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CourseList: View {
-
+    
     @State var courses = courseData
     @State var active = false
     @State var activeIndex = -1
+    @State var activeView = CGSize.zero
     
     var body: some View {
         
@@ -37,27 +38,29 @@ struct CourseList: View {
                                 course      : self.$courses[index],
                                 active      : self.$active,
                                 index       : index,
-                                activeIndex : self.$activeIndex
+                                activeIndex : self.$activeIndex,
+                                activeView  : self.$activeView
                             )
                                 .offset(y: self.courses[index].show ? -geometry.frame(in: .global).minY : 0)
                                 .opacity(self.activeIndex != index && self.active ? 0 : 1)
-                                .scaleEffect(self.activeIndex != index && self.active ? 0.5 : 1)
+                                .scaleEffect( (self.activeIndex != index && self.active) ? 0.5 : 1)
                                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
                                 .offset(x: self.activeIndex != index && self.active ? screen.width : 0)
-//                            Text("\(geometry.frame(in: .global).maxY),                      \(screen.height)").foregroundColor(.white).bold().padding(.leading, 10)
+                            
+//                            Text("\(geometry.frame(in: .global).maxY),  \(screen.height)").foregroundColor(.white).bold().padding(.leading, 10)
                         }
-    //                    .background(.black)
+                        //                    .background(.black)
                         .frame(height: 280)
                         .frame(maxWidth: self.courses[index].show ? .infinity : screen.width - 60)
                         .zIndex(self.courses[index].show ? 1 : 0)
                     }
                 }
                 .frame(width: screen.width)
-    //            .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+                //            .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
             }
             .statusBar(hidden: active ? true : false)
         }
-//        .animation(.linear)
+        //        .animation(.linear)
     }
 }
 
@@ -74,7 +77,7 @@ struct CourseView: View {
     @Binding var active: Bool
     var index: Int
     @Binding var activeIndex: Int
-    @State var activeView = CGSize.zero
+    @Binding var activeView: CGSize
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -105,7 +108,7 @@ struct CourseView: View {
                             .foregroundColor(Color.white)
                         Text(course.subTitle)
                             .foregroundColor(Color.white.opacity(0.7))
-                        Text("\(activeView.height)").foregroundColor(.black).bold().zIndex(1)
+//                        Text("\(1 - activeView.height / 1000)").foregroundColor(.black).bold().zIndex(1)
                     }
                     
                     Spacer()
@@ -117,7 +120,7 @@ struct CourseView: View {
                         VStack {
                             Image(systemName: "xmark")
                                 .font(.system(size: 16, weight: .medium))
-                            .foregroundColor(.white)
+                                .foregroundColor(.white)
                         }
                         .frame(width: 36, height: 36)
                         .background(Color.black)
@@ -134,7 +137,7 @@ struct CourseView: View {
             }
             .padding(show ? 30 : 20)
             .padding(.top, show ? 30 : 0)
-    //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
+            //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
             .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 460 : 280)
             .background(course.color)
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -144,6 +147,11 @@ struct CourseView: View {
                     self.activeView = value.translation
                 }
                     .onEnded { value in
+                        if self.activeView.height > 50 {
+                            self.show = false
+                            self.active = false
+                            self.activeIndex = -1
+                        }
                         self.activeView = .zero
                     }
             )
@@ -159,8 +167,9 @@ struct CourseView: View {
             }
         }
         .frame(height: show ? screen.height : 280)
-        .scaleEffect(1 - self.activeView.height / 1000)
-//        Text("\(1 - self.activeView.height / 1000)")
+//        .scaleEffect( show ? (1 - self.activeView.height/1000) : 1)
+//        .rotation3DEffect(Angle(degrees: self.activeView.height), axis: (x: 0, y: 10.0, z: 0))
+//        .hueRotation(Angle(degrees: self.activeView.height))
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
         .edgesIgnoringSafeArea(.all)
     }

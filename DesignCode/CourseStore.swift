@@ -36,6 +36,7 @@ class CouresStore: ObservableObject {
     @Published var courses: [Course] = courseData
     
     init(){
+        
         getArray(id: "course") { (items) in
             
             items.forEach { (item) in
@@ -43,7 +44,7 @@ class CouresStore: ObservableObject {
                     Course(
                         title    : item.fields["title"] as! String,
                         subTitle : item.fields["subtitle"] as! String,
-                        image    : Image("Card2"),
+                        image    : item.fields.linkedAsset(at: "image")?.url ?? URL(string: "")!,
                         logo     : Image("Logo1"),
                         color    : Color(hue: 0.725, saturation: 0.958, brightness: 0.844),
                         show     : false

@@ -31,11 +31,11 @@ struct HomeView: View {
                         
                     } label: {
                         Image(systemName: "bell")
-    //                        .renderingMode(.original)
-                            .foregroundColor(.black)
+//                            .renderingMode(.original)
+                            .foregroundColor(.primary)
                             .font(.system(size: 16, weight: .medium))
                             .frame(width: 36, height: 36)
-                            .background(Color.white)
+                            .background(Color("background3"))
                             .clipShape(Circle())
                             .shadow(color: Color.black.opacity(0.1), radius: 1, x: 1, y: 1 )
                             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10 )
@@ -166,7 +166,7 @@ struct WatchRingsView: View {
                 
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
@@ -175,7 +175,7 @@ struct WatchRingsView: View {
                 RingView(color1: Color(red: 0.86, green: 0.24, blue: 0.00) , color2: Color(red: 1.00, green: 0.62, blue: 0.24), width: 34, height: 34, percent: 54, show: .constant(true))
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
@@ -184,7 +184,7 @@ struct WatchRingsView: View {
                 RingView(color1: Color(red: 0.53, green: 0.00, blue: 1.00) , color2: Color(red: 0.94, green: 0.47, blue: 1.00), width: 34, height: 34, percent: 3, show: .constant(true))
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
         }

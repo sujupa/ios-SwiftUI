@@ -51,6 +51,7 @@
 		DAFA70EC2779C4C000C6832F /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA70EB2779C4C000C6832F /* CourseStore.swift */; };
 		DAFA70EF277D831A00C6832F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DAFA70EE277D831A00C6832F /* SDWebImageSwiftUI */; };
 		DAFA70F1277D9C4600C6832F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA70F0277D9C4600C6832F /* BlurView.swift */; };
+		DAFA70F3277E386F00C6832F /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA70F2277E386E00C6832F /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		DAFA70E62778A01B00C6832F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		DAFA70EB2779C4C000C6832F /* CourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
 		DAFA70F0277D9C4600C6832F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		DAFA70F2277E386E00C6832F /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				DA5AA51027685FED00626DF0 /* Preview Content */,
 				DAFA70EB2779C4C000C6832F /* CourseStore.swift */,
 				DAFA70F0277D9C4600C6832F /* BlurView.swift */,
+				DAFA70F2277E386E00C6832F /* Buttons.swift */,
 			);
 			path = DesignCode;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				DAAAC893276DB21C00989170 /* UpdateStore.swift in Sources */,
 				DA03E6D5276B7BA8008BE51F /* Home.swift in Sources */,
 				DAFA70E127774C1200C6832F /* CourseDetail.swift in Sources */,
+				DAFA70F3277E386F00C6832F /* Buttons.swift in Sources */,
 				DAAAC88D276C707E00989170 /* HomeView.swift in Sources */,
 				DA5AA50B27685FEB00626DF0 /* DesignCodeApp.swift in Sources */,
 			);

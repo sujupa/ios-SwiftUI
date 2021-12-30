@@ -12,7 +12,9 @@ struct DesignCodeApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            CourseList()
+//            CourseList()
+//            Home()
+            TapBar()
         }
     }
 }

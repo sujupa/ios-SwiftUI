@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CourseList: View {
     
@@ -95,7 +96,7 @@ struct CourseView: View {
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight : show ? .infinity : 280, alignment: .top)
             .offset(y: show ? 460 : 0)
-            .background(Color.white)
+            .background(Color("background2"))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .opacity(show ? 1 : 0)
@@ -129,7 +130,7 @@ struct CourseView: View {
                     }
                 }
                 Spacer()
-                course.image
+                WebImage(url: course.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: .infinity)
@@ -186,14 +187,14 @@ struct Course: Identifiable {
     var id = UUID()
     var title: String
     var subTitle: String
-    var image: Image
+    var image: URL
     var logo: Image
     var color: Color
     var show: Bool
 }
 
 var courseData = [
-    Course(title: "Prototype Designs in SwiftUI", subTitle: "18 Section", image: Image("Card1"), logo: Image("Logo1"), color: Color(hue: 0.077, saturation: 1.0, brightness: 0.925), show: false),
-    Course(title: "Prototype Designs in SwiftUI", subTitle: "20 Section", image: Image("Card2"), logo: Image("Logo2"), color: Color(hue: 0.941, saturation: 1.0, brightness: 0.906), show: false),
-    Course(title: "Prototype Designs in SwiftUI", subTitle: "16 Section", image: Image("Card3"), logo: Image("Logo3"), color: Color(hue: 0.001, saturation: 1.0, brightness: 0.914), show: false)
+    Course(title: "Prototype Designs in SwiftUI", subTitle: "18 Section", image: URL(string: "https://www.sujaypatil.in/External/DesignCode/Card1@2x.png")!, logo: Image("Logo1"), color: Color(hue: 0.077, saturation: 1.0, brightness: 0.925), show: false),
+    Course(title: "Prototype Designs in SwiftUI", subTitle: "20 Section", image: URL(string: "https://www.sujaypatil.in/External/DesignCode/Card2@2x.png")!, logo: Image("Logo2"), color: Color(hue: 0.941, saturation: 1.0, brightness: 0.906), show: false),
+    Course(title: "Prototype Designs in SwiftUI", subTitle: "16 Section", image: URL(string: "https://www.sujaypatil.in/External/DesignCode/Card3@2x.png")!, logo: Image("Logo3"), color: Color(hue: 0.001, saturation: 1.0, brightness: 0.914), show: false)
 ]
